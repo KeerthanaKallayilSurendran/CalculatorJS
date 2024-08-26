@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="h-screen flex justify-center items-center">
+    <div class="dar-mode"></div>
+    <div class="calculator-wrapper">
+        <input type="text" id="result" placeholder="0" readonly>
+        <div class="number-board flex">
+            <div class="left-side flex flex-col">
+                <div class="top-section">
+                    <button onclick="clearCalcScreen()" id="clear">AC</button>
+                    <button onclick= "displayData('**')" id="pow">Pow</button>
+                    <button onclick= "displayData('%')" id="mod">%</button>
+                </div>
+                <div class="number-section justify-start items-center">
+                    <button onclick= "displayData('7')" id="seven">7</button>
+                    <button onclick= "displayData('8')" id="eight">8</button>
+                    <button onclick= "displayData('9')" id="nine">9</button>
+                    <button onclick= "displayData('4')" id="four">4</button>
+                    <button onclick= "displayData('5')" id="five">5</button>
+                    <button onclick= "displayData('6')" id="six">6</button>
+                    <button onclick= "displayData('1')" id="one">1</button>
+                    <button onclick= "displayData('2')" id="two">2</button>
+                    <button onclick= "displayData('3')" id="three">3</button>
+                    <button onclick= "displayData('0')" id="zero">0</button>
+                    <button onclick= "displayData('.')" id="dot">.</button>
+                    <button onclick="backSpaceCalc()">&#9003</button>
+                </div>
+            </div>
+            <div class="side-section flex flex-col">
+                <button onclick= "displayData('+')" id="plus">+</button>
+                <button onclick= "displayData('-')" id="minus">-</button>
+                <button onclick= "displayData('*')" id="prod">*</button>
+                <button onclick= "displayData('/')" id="div">/</button>
+                <button onclick="evalCalcExpr()">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+</html>
